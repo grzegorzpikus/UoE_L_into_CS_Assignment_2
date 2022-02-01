@@ -13,9 +13,13 @@ def menu():
           '\n 5. Back to the main menu'
           '\n 6. Exit')
 
-
     while True:
-        command = int(input('Enter menu option number: '))
+        command = input('Enter menu option number: ')
+
+        try:
+            command = int(command)
+        except ValueError:
+            pass
 
         if command == 6:
             print('=' * 82)

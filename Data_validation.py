@@ -23,6 +23,7 @@ def card_number_test(cn):
     else:
         return True
 
+
 def cvv_test(cvv):
     """The function checks if cvv is 3-digit number."""
 
@@ -34,8 +35,9 @@ def cvv_test(cvv):
     else:
         return True
 
+
 def expiry_date_test(ed):
-    """The fuction checks if the expiry date is correct"""
+    """The function checks if the expiry date is correct"""
 
     if len(ed) != 5:
         return 'Wrong expiry date'
@@ -52,6 +54,7 @@ def expiry_date_test(ed):
                 return 'Wrong expiry date (year)'
 
         return True
+
 
 def regular_customer_test(rc):
 

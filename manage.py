@@ -45,8 +45,7 @@ def search_card(cn):
         status = False
         for row in reader:
             if row[3] == str(cn):
-                d = Card(row[1], row[2], row[3], row[4],
-                                          row[5])
+                d = Card(row[1], row[2], row[3], row[4], row[5])
                 status = True
 
     file.close()
@@ -57,9 +56,8 @@ def search_card(cn):
         return d
 
 
-
 def search_index_name(fn, sn):
-    """Function returns index of card details in CSV file based on ."""
+    """Function returns index of card details in CSV file based on name."""
 
     with open('data.csv', 'r') as file:
         reader = csv.reader(file)
@@ -72,7 +70,7 @@ def search_index_name(fn, sn):
 
 
 def search_index_card(cn):
-    """Function returns index of card details in CSV file based on ."""
+    """Function returns index of card details in CSV file based on card no."""
 
     with open('data.csv', 'r') as file:
         reader = csv.reader(file)
@@ -82,6 +80,7 @@ def search_index_card(cn):
                 status = row[0]
     file.close()
     return status
+
 
 def add_card(fn, sn, cn, cvv, ed, rc):
     """The function adds nwe card details to CSV file."""
@@ -124,7 +123,7 @@ def add_card(fn, sn, cn, cvv, ed, rc):
 
 
 def delete_card(cn):
-    """The functions deletes card details based on the card number"""
+    """The functions deletes card details based on the card number."""
 
     if search_index_card(cn) is False:
         return 'no card found'
@@ -156,6 +155,7 @@ def delete_card(cn):
     os.rename("copy_data.csv", "data.csv")
 
     return True
+
 
 def my_sort():
     """The function sort by surname and print all card details stored in a CSV

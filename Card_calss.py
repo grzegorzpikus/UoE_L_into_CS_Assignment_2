@@ -23,7 +23,7 @@ def Luhn(num):
 
 
 class Card:
-    """The calss that creates a single card details instance"""
+    """The class that creates a single card details instance."""
 
     def __init__(self, first_name, surname, number, cvv, exp_date):
         self.first_name = first_name

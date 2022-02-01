@@ -5,7 +5,7 @@
 This program stores and manages credit card details of customers who have
 signed up to be regular customers in an online store. It has several 
 functionalities like search and print, sort, add and delete chosen card
-details. 
+details. The program is used in a command line (terminal) via a navigation menu. 
 
 ### The Structure:
 The program consists 8 files:
@@ -74,16 +74,26 @@ Command `6`, however, ends the program.
 
 In the file `Tests.py` there are several unittests to check if the main 
 algorithms work correctly:
-1) Luhn algorithm - the test passes either valid or invalid card number. In the
-first case the the algorithm has to return `True` and for the second case `False`.
-2) Searching card details by name - the test passes details of a card that  
-is stored in the program, and it is not stored. In the first case the unittest compares
-graphical representation of Card Class (`__repr__`) for these two instances. 
-3) Searching card details by card number - Similarly to the searching by name,
-card numbers are used.
+1) Unit test for the Luhn algorithm - the test passes either valid or invalid 
+   card number. In the first case the the algorithm has to return `True` and for 
+   the second case `False`.
+2) Unit test for searching card details by name - the test passes details of a 
+   card that are stored in the program, and different card details that are not 
+   stored. In the first case the unittest compares graphical representation of 
+   Card Class (`__repr__`) for these two instances. If they are the same the 
+   test is passed. In the second case the program has to show info „Card not 
+   found” to pass the test.
+3) Unit test for searching card details by card number - Similarly to the 
+   searching by name, card numbers are used. The test passes details of a card 
+   that are stored in the program and card number that is not present in the 
+   program. In the first case, again,  the unittest compares graphical 
+   representation of Card Class for these two instances, if they are the same, 
+   the test is passed. In the second case, the test is passes if the program 
+   returns info „Card not found”.
 4) Quick sort - for this test a list of random strings is generated (each string
-contains 4 characters) and it is sorting by quick sort algorithm and by python
-`sort()` function. The results of this two operations are compared.  
+   contains 4 characters) and it is sorted by quick sort algorithm and by python
+   `sort()` function. The results of this two operations are compared. If the 
+   results of these two methods are the same, the test is passed.  
 
 
 
