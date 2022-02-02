@@ -66,7 +66,7 @@ def menu():
                     first_name = (name[0].lower()).capitalize()
                     if len(name) == 1:
                         print('-' * 80)
-                        print('Only First name was provided or there is no space between first and last names')
+                        print('Only First name was provided or there is no space between first and last name')
                         print('-' * 80)
                     else:
                         surname = (name[1].lower()).capitalize()

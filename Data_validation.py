@@ -10,11 +10,18 @@ def name_test(fn, sn):
         to examine whether it is a digit"""
         return any(char.isdigit() for char in sting)
 
-    if has_numbers(fn) is True:
+    result_list = []
+    result_list.append(has_numbers(fn))
+    result_list.append(has_numbers(sn))
+
+    if result_list[0] is True and result_list[1] is False:
         return 'Wrong first name'
-    if has_numbers(sn) is True:
+    elif result_list[0] is False and result_list[1] is True:
         return 'Wrong surname'
-    return True
+    elif result_list[0] is True and result_list[1] is True:
+        return 'Wrong first name and surname'
+    else:
+        return True
 
 
 def card_number_test(cn):
