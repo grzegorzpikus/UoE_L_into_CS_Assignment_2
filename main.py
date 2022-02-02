@@ -36,12 +36,13 @@ def menu():
                   '\n <*> print all cart details stored in the system [-p]. '
                   '\n <*> print all cart details stored in the system sorted by name [-sap]. '
                   '\n <*> search for card details based on name of a card holder [-n]. '
-                  '\n <*> search for cart details based on a card number [-n].'
+                  '\n <*> search for cart details based on a card number [-c].'
                   '\nIn the option 3 you can:'
                   '\n <*> add new card details'
                   '\nIn the option 4 you can:'
                   '\n <*> delete card details based on name of a card holder [-n].'
-                  '\n <*> delete card tetails baded on a card number [-c]')
+                  '\n <*> delete card tetails baded on a card number [-c]'
+                  '\nIn every option you can go back to the mian menu [-e]')
 
         elif command == 2:
             print('=' * 37 + ' Search ' + '=' * 37)

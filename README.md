@@ -46,7 +46,7 @@ To go back to the main menu `-e` needs to be entered.
 
 #####Add
 
-This section allowes for adding new card to the system. The user of the application
+This section allows for adding a new card to the system. The user of the application
 has to provided necessary data: first name of the card holder, surname of the 
 cardholder, the card number, CVV, exapiry date and confirmation that a cardholder
 wants to be a regular customer (`Y` or `N`). Typing `Y` is necessary to save the card
@@ -80,15 +80,15 @@ algorithms work correctly:
 2) Unit test for searching card details by name - the test passes details of a 
    card that are stored in the program, and different card details that are not 
    stored. In the first case the unittest compares graphical representation of 
-   Card Class (`__repr__`) for these two instances. If they are the same the 
+   Card Class (`__repr__`) for two instances. If they are the same the 
    test is passed. In the second case the program has to show info „Card not 
    found” to pass the test.
 3) Unit test for searching card details by card number - Similarly to the 
    searching by name, card numbers are used. The test passes details of a card 
    that are stored in the program and card number that is not present in the 
    program. In the first case, again,  the unittest compares graphical 
-   representation of Card Class for these two instances, if they are the same, 
-   the test is passed. In the second case, the test is passes if the program 
+   representation of Card Class for two instances, if they are the same, 
+   the test is passed. In the second case, the test is passed if the program 
    returns info „Card not found”.
 4) Quick sort - for this test a list of random strings is generated (each string
    contains 4 characters) and it is sorted by quick sort algorithm and by python
