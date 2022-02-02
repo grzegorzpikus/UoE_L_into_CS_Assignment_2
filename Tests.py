@@ -17,7 +17,7 @@ class TestLuhn(unittest.TestCase):
                                      '406', '04/26')
         self.assertEqual(result_name, gorge_tones)
 
-        result_no_name = manage.search_name('Eve', 'McDnald')
+        result_no_name = manage.search_name('Eve', 'McDonald')
         eve_macdonald = 'Card not found'
         self.assertEqual(result_no_name, eve_macdonald)
 

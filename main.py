@@ -95,7 +95,7 @@ def menu():
                     menu()
                 cn = ''
                 try:
-                    cn = int(input('Enter card number (type \'0\' for returning to the main menu): '))
+                    cn = int(input('Enter card number (type \'-e\' for returning to the main menu): '))
                 except ValueError:
                     print('-' * 82)
                     print("That was invalid number. Please try again.")
@@ -113,9 +113,9 @@ def menu():
                 if rc == '-e':
                     menu()
 
-                x = add_card(fn, sn, cn, cvv, ed, rc)
+                new_card = add_card(fn, sn, cn, cvv, ed, rc)
 
-                if x == True:
+                if new_card == True:
                     print('-' * 82)
                     print("The card details have been successfully added.")
                     print('-' * 82)
@@ -133,14 +133,14 @@ def menu():
                 elif delete_input == '-c':
                     try:
                         delete_input_card = int(input('Enter card number: '))
-                        x = delete_card(delete_input_card)
-                        if x == True:
+                        removing_card = delete_card(delete_input_card)
+                        if removing_card is True:
                             print('-' * 82)
                             print('The card details have been removed successfully.')
                             print('-' * 82)
                         else:
                             print('-' * 82)
-                            print(x)
+                            print(removing_card)
                             print('-' * 82)
                     except ValueError:
                         print('-' * 82)
