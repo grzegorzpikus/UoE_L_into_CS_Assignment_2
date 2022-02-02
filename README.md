@@ -5,7 +5,8 @@
 This program stores and manages credit card details of customers who have
 signed up to be regular customers in an online store. It has several 
 functionalities like search and print, sort, add and delete chosen card
-details. The program is used in a command line (terminal) via a navigation menu. 
+details. The program can be started in a command line by typing `python3 main.py` 
+A user can use it via a navigation menu. 
 
 ### The Structure:
 The program consists 8 files:
@@ -23,7 +24,7 @@ The program consists 8 files:
 
 ### How to use the program
 
-The program can be started from the command console by typing `python main.py`. 
+The program can be started from the command console by typing `python3 main.py`. 
 The main menu appears:
 ![img.png](img/img.png)
 Now, a user can choose one of 6 options: Inspect the main menu content by typing 
