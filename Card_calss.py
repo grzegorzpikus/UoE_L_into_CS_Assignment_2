@@ -37,6 +37,8 @@ class Card:
         return f'{self.first_name} {self.surname}, card number: ' \
                f'{self.number}, CVV: {self.cvv}, expiry date: {self.exp_date}'
 
+    # this __eq__ method had to be modified to compare graphical representation
+    # of two instances of Card Class, needed for Unittests.
     def __eq__(self, other):
         if isinstance(other, self.__class__):
 

@@ -2,9 +2,12 @@ from datetime import date
 
 
 def name_test(fn, sn):
-    """The function checks if first name and surname are strings."""
+    """The function checks if first name and surname are strings containing
+    letters only."""
 
     def has_numbers(sting):
+        """The function checks every character in a string
+        to examine whether it is a digit"""
         return any(char.isdigit() for char in sting)
 
     if has_numbers(fn) is True:
@@ -27,8 +30,8 @@ def card_number_test(cn):
 def cvv_test(cvv):
     """The function checks if cvv is 3-digit number."""
 
-    if type(cvv) == int:
-        cvv = str(cvv)
+    if cvv.isnumeric() is False:
+        return 'Wrong cvv'
 
     if len(cvv) != 3:
         return 'Wrong cvv'
@@ -82,6 +85,10 @@ def initial_test(fn, sn, cn, cvv, ed, rc):
     d = expiry_date_test(ed)
     e = regular_customer_test(rc)
 
+    # In a list below the function collects the result of all tests.
+    # If at least one of them is not True but a message, the initial test
+    # is not passed and it shows message what was wrong with data
+    # that were passed through.
     list_of_results = [a, b, c, d, e]
     output = ''
 

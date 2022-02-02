@@ -4,7 +4,7 @@ from Card_calss import Luhn, Card
 from sorting import quick_sort
 
 
-def print_all():
+def print_all_cards():
     """The function prints all credit card details stored in the CSV file."""
 
     with open('data.csv', 'r') as file:
@@ -37,8 +37,8 @@ def search_name(fn, sn):
 
 
 def search_card(cn):
-    """The function searches for details of a chosen card by first name and
-    surname name in the CSV file."""
+    """The function searches for details of a chosen card by card number
+     in the CSV file."""
 
     with open('data.csv', 'r') as file:
         reader = csv.reader(file)
@@ -57,7 +57,9 @@ def search_card(cn):
 
 
 def search_index_name(fn, sn):
-    """Function returns index of card details in CSV file based on name."""
+    """Function returns index of card details in CSV file based on name.
+    This function is necassary to organize data in CSV file. Each card gets
+    its own index (first column in CSV file)."""
 
     with open('data.csv', 'r') as file:
         reader = csv.reader(file)
@@ -125,6 +127,9 @@ def add_card(fn, sn, cn, cvv, ed, rc):
 def delete_card(cn):
     """The functions deletes card details based on the card number."""
 
+    # Here the program needs the index of the deleting card, to rewrite all
+    # index of cards that are stored below the deleting card in CSV file to keep
+    # consistent numbering [!].
     if search_index_card(cn) is False:
         return 'no card found'
     else:
@@ -135,6 +140,7 @@ def delete_card(cn):
         reader = csv.reader(output_file)
         writer = csv.writer(input_file)
 
+        # [!]
         for row in reader:
             if int(row[0]) < index:
                 writer.writerow(row)
@@ -159,7 +165,7 @@ def delete_card(cn):
 
 def my_sort():
     """The function sort by surname and print all card details stored in a CSV
-    file."""
+    file. The function uses quicksort method that is stored in sorting file."""
 
     with open('data.csv', 'r') as file:
         reader = csv.reader(file)

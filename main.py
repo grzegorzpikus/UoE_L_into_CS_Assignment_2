@@ -1,4 +1,4 @@
-from manage import print_all, search_name, search_card, add_card, delete_card, \
+from manage import print_all_cards, search_name, search_card, add_card, delete_card, \
     my_sort
 
 
@@ -58,7 +58,7 @@ def menu():
                     menu()
                 elif search_input == '-p':
                     print('-' * 80)
-                    print_all()
+                    print_all_cards()
                     print('-' * 80)
                 elif search_input == '-n':
                     search_input_name = str(input('Enter first name and last name of a card holder (separated by space): '))
