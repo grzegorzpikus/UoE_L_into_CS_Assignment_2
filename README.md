@@ -23,8 +23,8 @@ The program consists 8 files:
 
 ### How to use the program
 
-The program can be started from the command console by typing `main.py`. The 
-main menu appears:
+The program can be started from the command console by typing `python main.py`. 
+The main menu appears:
 ![img.png](img/img.png)
 Now, a user can choose one of 6 options: Inspect the main menu content by typing 
 `1`, Search by typing `2`, Add a new card to the program by typing `3`, Delete 
