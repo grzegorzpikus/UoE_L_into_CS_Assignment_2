@@ -59,9 +59,11 @@ def expiry_date_test(ed):
         year = month_year[1]
         if int(month) > 12:
             return 'Wrong expiry date (moth)'
+        if int(year) < date.today().year - 2000:
+            return 'Wrong expiry date (year)'
         if int(year) == date.today().year - 2000:
-            if int(month) > date.today().month:
-                return 'Wrong expiry date (year)'
+            if int(month) < date.today().month:
+                return 'Wrong expiry date (month)'
 
         return True
 
