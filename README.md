@@ -1,4 +1,4 @@
-## Credit Card Validation and Storage - Assignment 2 (Univeristy of Essex)
+## Credit Card Validation and Storage - Assignment 2 (University of Essex)
 ************************************************************************
 
 ### Description:
