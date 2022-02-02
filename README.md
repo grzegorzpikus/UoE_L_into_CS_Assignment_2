@@ -12,7 +12,7 @@ A user can use it via a navigation menu.
 The program consists 8 files:
 1) README.md - this file.
 2) Card_calss.py - the file consists Card Class and Luhn algorithm.
-3) data.csv - the file has initial data of 10 credit cards.
+3) data.csv - the file has initial data of 12 credit cards.
 4) Data_validation.py - the file consists functions that test if data that
    are passed to the program are valid and right formatted.
 5) main.py - the file consist the menu function and likens all functionalities
