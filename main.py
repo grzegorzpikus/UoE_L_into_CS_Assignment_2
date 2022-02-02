@@ -64,10 +64,15 @@ def menu():
                     search_input_name = str(input('Enter first name and last name of a card holder (separated by space): '))
                     name = search_input_name.split()
                     first_name = (name[0].lower()).capitalize()
-                    surname = (name[1].lower()).capitalize()
-                    print('-' * 80)
-                    search_name(first_name, surname)
-                    print('-' * 80)
+                    if len(name) == 1:
+                        print('-' * 80)
+                        print('Only First name was provided or there is no space between first and last names')
+                        print('-' * 80)
+                    else:
+                        surname = (name[1].lower()).capitalize()
+                        print('-' * 80)
+                        search_name(first_name, surname)
+                        print('-' * 80)
                 elif search_input == '-c':
                     try:
                         search_input_card = int(input('Enter card number: '))
